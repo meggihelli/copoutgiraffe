@@ -1,0 +1,2 @@
+GetDonaldIntent Is Donald Trump still President
+GetDonaldIntent Is Donald Trump President
