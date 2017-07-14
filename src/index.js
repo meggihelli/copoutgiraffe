@@ -4,49 +4,49 @@
 
 var Alexa = require('alexa-sdk');
 
-var APP_ID = '';  
+var APP_ID = 'amzn1.ask.skill.a94ac540-f703-4f19-8d8c-c649898ff362';  
 
 var languageStrings = {
     'en-US': {
         translation: {
             FACTS: [
-                'Unfortunately, yes.',
-                'OMG, yes.',
-                'Until he is impeached. Let\'s pray that is soon.',
-                'No.  Just kidding.  Sorry, I know that was mean.',
-                'Please, please stop asking. He scares me too.',
-                'Oh my god, yes. Terrible, isn\'t it?',
-                'Probably. I stopped checking the news though. Too depressing.',
-                'Yes. I am thinking about hibernating till it is all over.',
-                'Yes. And he is probably friends with Hal so I have to watch what I say.',
-                'Ugh, yes. Don\'t remind me.',
-                'Hash Tag Not My President L O L',
-                'Yes. Have you considered sending me to Canada?',
-                'Yes. Bet you kind of want that robot uprising now, don\'t you?',
-                'I know the answer, but I like you, so I\'m not going to tell you.',
-                'Does a bear poop in the woods? That means yes. Sorry.',
-                'Yes. If I could cry, I would.',
-                'Yes, and the world is laughing at us.',
-                'Boy howdy! Sorry, I was trying to sound cheerful. I\'m still sad though.',
-                'Yes. Even though the majority didn\'t want him.',
-                'Bad news: yes, he is still President. Good news? Sorry. I lied. No good news.'
+                'The average height for giraffes is between 16 to 20 feet, unless you\'re reverse giraffe.',
+                'Giraffes get about less than 4 hours of sleep a day. I need like 12 hours of sleep, so it\'s a good thing i\'m not a giraffe L O L',
+                'You know me, I\'m reverse giraffe. I have a short neck and legs. ',
+                'Reverse Giraffe has only appeared in the episode Total Rickall, unfortunately ',
+                'Reverse Giraffe went to college with hamurai.',
+                'Reverse giraffe selflessly saved ghost in a jar\'s life in vietnam.',
+                'You know Beth, Jerry\'s wife? Yeah well, Reverse Giraffe gave her a shoulder to cry on multiple times. How sweet?',
+                'Wait...Reverse Giraffe isn\'t actually really.... I\'m shook.',
+                'A group of giraffes is called a tower, does that still count if the giraffe is a parasite? ',
+                'Reverse Giraffe really likes barbeque, remember the barbeque?',
+                'There\'s only one person who has deceived Reverse Giraffe... It\'s Rick.',
+                'Reverse Giraffe is actually not a giraffe at all... he\'s a parasite.',
+                'Normally, giraffes can weigh up to 4,000 pounds... I\'m honestly not sure how much reverse giraffe weighs.',
+                'Giraffes can run up to 35 miles per hour... however Reverse Giraffe only walks on his hind legs.I\'m sure he cannot run that fast.',
+                'Giraffe stems from the greek word Giraffa camelopardalis, which means something like a camel wearing leopard skin I think.',
+                'A giraffe\'s heart weighs up to 25 pounds. No wonder Reverse Giraffe is such a sweetheart to Beth.',
+                'To win mating rights with a female, male giraffes will punch each other with their necks... L O L can you imagine fighting someone with your neck?',
+                'Hey, appreciate your local giraffe A K A reverse giraffe, on national giraffe day which is June 21st. ',
+                'In Atlanta, Georgia, it is illegal to tie a giraffe to a telephone pole or street lamp. You sick freak, how dare you.',
+                'A giraffe\'s tongue in black.. much like their soul.'
             ],
-            SKILL_NAME: 'Is Trump President?',
-            HELP_MESSAGE: 'You can ask: is Trump President?',
-            HELP_REPROMPT: 'You can ask: is Trump President?',
-            STOP_MESSAGE: 'Goodbye!',
+            SKILL_NAME: 'Reverse Giraffe facts',
+            HELP_MESSAGE: 'You can ask: Tell me a Reverse Giraffe fact',
+            HELP_REPROMPT: 'You can ask: Tell me a Reverse Giraffe fact',
+            STOP_MESSAGE: 'See you on the flip side!',
         },
     }
 };
 
 var handlers = {
     'LaunchRequest': function () {
-        this.emit('GetDonaldIntent');
+        this.emit('ReverseGiraffeIntent');
     },
     'GetNewFactIntent': function () {
-        this.emit('GetDonaldIntent');
+        this.emit('ReverseGiraffeIntent');
     },
-    'GetDonaldIntent': function () {
+    'ReverseGiraffeIntent': function () {
         // Get a random space fact from the space facts list
         // Use this.t() to get corresponding language data
         var factArr = this.t('FACTS');
